@@ -19,7 +19,7 @@ $(document).on('click', '.thumb', function(e){
     var $img,
     src = this.href;
     request = src;
-    r.preventDefault();
+    e.preventDefault();
     $thumbs.removeClass('active');
     $(this).addClass('active');
     if(cache.hasOwnProperty(src)) {
@@ -35,7 +35,7 @@ $(document).on('click', '.thumb', function(e){
         $img.on('load',function(){
             $img.hide();
             $frame.removeClass('is-loading').append($img);
-            cache[src].isLoading = fales;
+            cache[src].isLoading = false;
             if (request === src ){
                 crossfade($img);
             }

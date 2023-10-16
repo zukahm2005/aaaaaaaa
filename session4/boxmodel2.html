@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Box model</title>
+</head>
+<style>
+    .box{
+        border: 1px solid green;
+        margin-top: 100px;
+        margin-right: 30px;
+        margin-left: 8em;
+        margin-bottom: 40px;
+        padding:40px;
+    }
+    .alternate{
+        border:1px solid green;
+        margin-top:-130px;
+        margin-bottom: 0px;
+        margin-left: 8em;
+        margin-right: 30px;
+        padding:40px;
+    }
+    .container{
+        padding: 5px;
+        border: 1px solid;
+    }
+</style>
+<body>
+    <div class="containerer">
+        <div class="box">Change my margin</div>
+    </div>
+    <div class="box container">
+        <div class="box alternate">Change my margin 2</div>
+    </div>
+</body>
+</html>
